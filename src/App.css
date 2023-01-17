@@ -20,6 +20,8 @@
   --darker-white: #e4e4e4;
   --primary-blue: #00acdf;
   --primary-dark: rgba(255,255,255,0)
+  --primary-red: #ef4035;
+  --primary-hover-red:#f33501
 }
 
 *{
@@ -115,4 +117,63 @@ nav a.nav-link{
 }
 .navbar-nav > li > a:hover{
   border-top: 0.1874rem solid var(--primary-blue);
+}
+
+/*********** Banner ***********/
+
+.header-wrapper{
+  position: relative;
+  background: url("./assets/img/banner-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  overflow: scroll;
+}
+.main-info{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: auto;
+}
+.main-info h1{
+  color: var(--primary-blue);
+  text-transform: uppercase;
+}
+.main-info p{
+  color: var(--darker-white);
+  text-transform: uppercase;
+  margin-top: -0.5rem;
+}
+.description p{
+  margin: 2rem;
+  color: var(--primary-white);
+}
+.contact{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+.btn-main-offer{
+  border: 0.5rem solid var(--primary-red);
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  color: var(--primary-white);
+  margin:2rem
+}
+.btn-main-offer:hover{
+  text-decoration: none;
+  background-color: var(--primary-hover-red);
+  transition: 0.2s ease-in-out;
+}
+
+@media(max-width: 768px){
+  header-wrapper{
+    height: 100%;
+    width: 100%;
+  }
 }
