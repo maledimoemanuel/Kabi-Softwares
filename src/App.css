@@ -1,0 +1,118 @@
+/*Custom Fonts*/
+@font-face{
+  font-family: Centra;
+  src: url('./assets/fonts/CentraNo2-Bold.ttf');
+  font-weight: 700;
+}
+@font-face{
+  font-family: Centra;
+  src: url('./assets/fonts/CentraNo2-Medium.ttf');
+  font-weight: 500;
+}
+@font-face{
+  font-family: Centra;
+  src: url('./assets/fonts/CentraNo2-Book.ttf');
+  font-weight: 400;
+}
+
+:root{
+  --primary-white: #fff;
+  --darker-white: #e4e4e4;
+  --primary-blue: #00acdf;
+  --primary-dark: rgba(255,255,255,0)
+}
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body{
+  font-weight: 400;
+  overflow: auto;
+  position: relative;
+  background-color: var(--darker-white) !important;
+  color: var(--primary-white) !important;
+  font-family: 'Centra', sans-serif !important;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+p, a, li, button, ul {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+@media (min-width:1700px) {
+	main .container {
+		max-width: 100%;
+		padding: 0 150px;
+	}
+}
+
+p.success {
+	color: green;
+}
+
+p.danger {
+	color: red;
+}
+
+/************ Navbar Css ************/
+.logo{
+  width: 5rem
+}
+ .navbar-nav{
+  margin-left: auto;
+ }
+nav a.nav-link{
+  letter-spacing: 0.037rem;
+  cursor: pointer;
+}
+.navbar-nav > li > a{
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  color: var(--darker-white) !important;
+  border-top: 0.1874rem solid var(--primary-dark);
+}
+.navbar-brand{
+  max-width: 17.25rem;
+  padding: 0 !important;
+  height: 6rem !important;
+}
+.navbar-nav > li > a.active, .navbar-nav > li >a.active:focus{
+  border-top: 0.1874rem solid var(--primary-blue);
+}
+.navbar-nav > li > a:hover{
+  border-top: 0.1874rem solid var(--primary-blue);
+}
